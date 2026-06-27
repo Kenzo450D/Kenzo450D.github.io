@@ -1,5 +1,5 @@
 ---
-name: Dr. Sayantan Datta
+name: Sayantan Datta, PhD
 title: Robotics Software Developer at Mujin Corp.
 email: sayantan.knz@gmail.com
 linkedin: https://www.linkedin.com/in/stndta/
@@ -7,16 +7,14 @@ github: https://github.com/kenzo450D/
 scholar: https://scholar.google.com/citations?user=r1g5_v0AAAAJ
 resume: Sayantan_s_Resume_2_page.pdf
 profile_image: 20260131_130928.jpg
-status1: Warehouse Robotics (Planning)
-status2: Ph.D. Graduate (May 2024)
-hero_description: I am a robotics engineer and researcher with a Ph.D. in Computer Science from the University of North Carolina at Charlotte. Driven by curiosity, I specialize in bridging the gap between robot perception (graph SLAM, mapping) and motion planning. I currently apply my skills to planning and navigation challenges in warehouse robotics.
+hero_description: I am a robotics engineer and researcher with a Ph.D. in Computer Science from the University of North Carolina at Charlotte. Driven by curiosity and a drive to build scalable robotic solutions, I specialize in bridging the gap between robot perception (graph SLAM, mapping) and motion planning. I currently apply my skills to planning and navigation challenges in warehouse robotics.
 ---
 
 # About Me
 
 My journey in robotics is guided by a simple realization: for a robot to achieve high-level autonomy, it must tightly couple its **perception systems** with its **planning and navigation loops**. Having researched and worked across both disciplines, I focus on building robust, real-world autonomy stacks.
 
-I graduated with my Ph.D. in Computer Science in **May 2024** from UNC Charlotte, under the guidance of **[Dr. Srinivas Akella](https://webpages.charlotte.edu/sakella/)**. My doctoral research focused on the complex domain of autonomous exploration and path planning under time/deadline constraints.
+I graduated with my Ph.D. in Computer Science in **May 2024** from UNC Charlotte, under the guidance of **[Dr. Srinivas Akella](https://webpages.charlotte.edu/sakella/)**. I advanced the field of autonomous exploration during my doctoral research by developing highly optimized time-sensitive planning algorithms for strict deadline constraints.
 
 Prior to my Ph.D., I laid my foundations in robot perception as an M.S. student at the **[Robotics Research Center (RRC) at IIIT Hyderabad](https://robotics.iiit.ac.in/)**, working on multi-scale SLAM pose-graph robustification and topological graph analysis.
 
