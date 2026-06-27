@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayantan Datta - PhD Candidate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .research-area {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .education-item h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .education-item .institution {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .education-item .details {
+            color: #666;
+            font-style: italic;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-link {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, rgba(255, 235, 59, 0.3), rgba(255, 193, 7, 0.3));
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-img">SD</div>
+            <h1>Sayantan Datta</h1>
+            <div class="subtitle">PhD Candidate in Computer Science</div>
+            <div class="subtitle">University of North Carolina at Charlotte</div>
+            <div class="status-badge">🎓 Available for Full-Time Opportunities - January 2024</div>
+        </header>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2><span class="card-icon">🔬</span>Research Focus</h2>
+                <p>I am a PhD candidate specializing in <span class="highlight">mobile robotics</span> with a focus on the challenging problem of <span class="highlight">prioritized exploration</span>. My work aims to develop intelligent algorithms that enable robots to efficiently explore and understand their environments.</p>
+                
+                <div style="margin-top: 20px;">
+                    <div class="research-area">Mobile Robotics</div>
+                    <div class="research-area">Prioritized Exploration</div>
+                    <div class="research-area">Robot Perception</div>
+                    <div class="research-area">SLAM</div>
+                    <div class="research-area">Multi-Robot Systems</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><span class="card-icon">🎓</span>Education</h2>
+                
+                <div class="education-item">
+                    <h3>PhD in Computer Science</h3>
+                    <div class="institution">University of North Carolina at Charlotte</div>
+                    <div class="details">Expected Graduation: End of Fall 2023</div>
+                    <div class="details">Advisor: Dr. Srinivas Akella</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>MS in Computer Science</h3>
+                    <div class="institution">IIIT Hyderabad</div>
+                    <div class="details">Robotics Research Center</div>
+                    <div class="details">Focus: Robot Perception, Robust SLAM, Multi-Robot SLAM</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><span class="card-icon">👨‍🏫</span>Academic Mentorship</h2>
+                <p>I am fortunate to work under the guidance of <strong>Dr. Srinivas Akella</strong> at UNC Charlotte. My research journey has taken me from the prestigious <strong>Robotics Research Center at IIIT Hyderabad</strong> to my current work in advanced mobile robotics.</p>
+                
+                <div style="margin-top: 15px;">
+                    <p><strong>Research Areas:</strong></p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Robust SLAM algorithms for challenging environments</li>
+                        <li>Multi-robot coordination and exploration strategies</li>
+                        <li>Advanced robot perception systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><span class="card-icon">🚀</span>Career Outlook</h2>
+                <p>As I approach the completion of my PhD program, I am actively seeking <strong>full-time opportunities</strong> starting <strong>January 2024</strong>. I am interested in roles that leverage my expertise in:</p>
+                
+                <div style="margin-top: 15px;">
+                    <ul style="padding-left: 20px;">
+                        <li>Robotics Research & Development</li>
+                        <li>Autonomous Systems Engineering</li>
+                        <li>Machine Learning for Robotics</li>
+                        <li>Computer Vision & Perception</li>
+                        <li>Algorithm Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="card-icon">📧</span>Connect With Me</h2>
+            <p style="text-align: center; margin-bottom: 20px;">I'm always interested in discussing robotics research, collaboration opportunities, and career prospects.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:your.email@charlotte.edu" class="contact-link">
+                    📧 Email
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-link">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" class="contact-link">
+                    💻 GitHub
+                </a>
+                <a href="https://scholar.google.com/citations?user=yourid" class="contact-link">
+                    🎓 Google Scholar
+                </a>
+                <a href="path/to/your/cv.pdf" class="contact-link">
+                    📄 Download CV
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2023 Sayantan Datta | Last updated: December 2023</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add click animation to contact links
+            const contactLinks = document.querySelectorAll('.contact-link');
+            contactLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Create ripple effect
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                    ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Intersection Observer for animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            // Initially hide cards for animation
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <style>
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+</html>
